@@ -1,1 +1,1 @@
-Traveling to Mongolia with this website. 
+If u wanna traveling to beautiful places of Mongolia starting with this website.
