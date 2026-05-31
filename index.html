@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Монголд аялах — Хөх тэнгэрийн орон</title>
+  <meta name="description" content="Монгол орны аялал, соёл, байгалийн сонгомол туршлагууд. Говь, тал, уул, нуурыг нээх аяллууд.">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+</head>
+<body>
+
+  <!-- ─── Icons Sprite ─── -->
+  <div style="display:none" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
+      <symbol id="icon-play" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></symbol>
+      <symbol id="icon-star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></symbol>
+      <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
+    </svg>
+  </div>
+
+  <!-- ─── Custom Cursor ─── -->
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ─── Loader ─── -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader-logo"><span>M</span>ONGOLIA</div>
+    <div class="loader-bar"></div>
+  </div>
+
+  <!-- ═══════════════════════════
+       NAVIGATION
+  ═══════════════════════════ -->
+  <nav class="nav" role="navigation" aria-label="Үндсэн цэс">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="Монгол аяллын нүүр хуудас">
+        <span class="dot" aria-hidden="true"></span>
+        MONGOLIA
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#" aria-current="page">Нүүр</a></li>
+        <li><a href="#about">Бидний тухай</a></li>
+        <li><a href="#tours">Аяллууд</a></li>
+        <li><a href="#gallery">Галерей</a></li>
+        <li><a href="#reviews">Сэтгэгдэл</a></li>
+        <li><a href="#contact">Холбоо барих</a></li>
+      </ul>
+      <button class="nav-search" aria-label="Хайх">
+        <svg width="18" height="18"><use href="#icon-search"/></svg>
+      </button>
+      <button class="nav-hamburger" aria-label="Цэс нээх" aria-expanded="false">
+        <svg width="22" height="22"><use href="#icon-menu"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════
+       HERO
+  ═══════════════════════════ -->
+  <section class="hero" aria-label="Эхлэл хэсэг">
+    <div class="hero-image" role="img" aria-label="Монголын тал нутгийн нар мандалт"></div>
+    <div class="hero-bg" aria-hidden="true"></div>
+
+    <!-- Slide indicator -->
+    <div class="hero-indicator" aria-hidden="true">
+      <span class="hero-indicator-num">01</span>
+      <span class="hero-indicator-num">02</span>
+      <div class="hero-indicator-line active"></div>
+      <span class="hero-indicator-num active">03</span>
+      <span class="hero-indicator-num">04</span>
+      <span class="hero-indicator-num">05</span>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Хөх тэнгэрийн орон</p>
+      <h1 class="hero-title">МОНГОЛД<br>ЗОЧИЛЪЁ</h1>
+      <p class="hero-subtitle">
+        Эртний түүх, нүүдэлчдийн соёл, хөх тэнгэрийн дорхи уудам нутгаар аялах мөрөөдлөө бидэнтэй хамт биелүүлээрэй.
+      </p>
+      <div class="hero-cta">
+        <a href="#tours" class="btn-primary">
+          Аялал сонгох
+          <svg width="16" height="16"><use href="#icon-arrow-right"/></svg>
+        </a>
+        <a href="#gallery" class="btn-ghost">Галерей үзэх</a>
+      </div>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">
+      <span>Доош</span>
+      <div class="scroll-hint-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════
+       FEATURES STRIP
+  ═══════════════════════════ -->
+  <section id="about" class="features-strip">
+    <div class="features-inner" data-stagger>
+      <article class="feature-item reveal">
+        <p class="feature-tag">Эртний хийдүүд</p>
+        <p class="feature-text">
+          Эрдэнэ Зуу, Амарбаясгалант, Гандантэгчинлэнгийн түүхэн хийдүүдээр аялан Монголын оюуны өвийг мэдэрнэ.
+        </p>
+        <a href="#tours" class="feature-link">
+          Дэлгэрэнгүй
+          <svg width="14" height="14"><use href="#icon-arrow-right"/></svg>
+        </a>
+      </article>
+
+      <article class="feature-item reveal">
+        <p class="feature-tag">Нүүдэлчдийн амьдрал</p>
+        <p class="feature-text">
+          Гэрт хонож, морь унан, айраг амсаж, жинхэнэ нүүдэлчдийн ахуй соёлтой танилц.
+        </p>
+        <a href="#tours" class="feature-link">
+          Дэлгэрэнгүй
+          <svg width="14" height="14"><use href="#icon-arrow-right"/></svg>
+        </a>
+      </article>
+
+      <article class="feature-item reveal">
+        <p class="feature-tag">Одтой тал, Говь</p>
+        <p class="feature-text">
+          Говийн шөнө, Хонгорын элсэн манханд оддын тэнгэрийг харан тал нутгийн нам гүмийг мэдэр.
+        </p>
+        <a href="#tours" class="feature-link">
+          Дэлгэрэнгүй
+          <svg width="14" height="14"><use href="#icon-arrow-right"/></svg>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════
+       TOURS SECTION
+  ═══════════════════════════ -->
+  <section id="tours" class="tours">
+    <div class="container">
+      <header class="section-header reveal">
+        <p class="section-eyebrow">Сонгомол туршлага</p>
+        <h2 class="section-title">ОНЦЛОХ АЯЛЛУУД</h2>
+      </header>
+    </div>
+
+    <div class="tours-grid" data-stagger>
+
+      <article class="tour-card reveal" tabindex="0" role="button" aria-label="Аялал 1: Хархорум &amp; Эрдэнэ Зуу">
+        <div class="tour-card-img" style="background-image: url('https://source.unsplash.com/600x800/?mongolia,monastery&sig=1')" role="img" aria-label="Эрдэнэ Зуу хийд"></div>
+        <div class="tour-card-overlay" aria-hidden="true"></div>
+        <div class="tour-card-content">
+          <p class="tour-card-num">Аялал № 1</p>
+          <h3 class="tour-card-name">Хархорум &amp; Эрдэнэ Зуу</h3>
+          <p class="tour-card-sub">Хархорум, Эрдэнэ Зуу, Орхоны хөндий — Монголын түүхэн голомт.</p>
+          <p class="tour-card-price">₮680,000-с</p>
+        </div>
+      </article>
+
+      <article class="tour-card reveal" tabindex="0" role="button" aria-label="Аялал 2: Говийн манхан">
+        <div class="tour-card-img" style="background-image: url('https://source.unsplash.com/600x800/?mongolia,desert&sig=2')" role="img" aria-label="Говийн элсэн манхан"></div>
+        <div class="tour-card-overlay" aria-hidden="true"></div>
+        <div class="tour-card-content">
+          <p class="tour-card-num">Аялал № 2</p>
+          <h3 class="tour-card-name">Говийн манхан</h3>
+          <p class="tour-card-sub">Хонгорын элс, Баянзаг, Ёлын ам — говийн гайхамшиг.</p>
+          <p class="tour-card-price">₮1,280,000-с</p>
+        </div>
+      </article>
+
+      <article class="tour-card reveal" tabindex="0" role="button" aria-label="Аялал 3: Хөвсгөл нуур">
+        <div class="tour-card-img" style="background-image: url('https://source.unsplash.com/600x800/?mongolia,lake&sig=3')" role="img" aria-label="Хөвсгөл нуур"></div>
+        <div class="tour-card-overlay" aria-hidden="true"></div>
+        <div class="tour-card-content">
+          <p class="tour-card-num">Аялал № 3</p>
+          <h3 class="tour-card-name">Хөвсгөл нуур</h3>
+          <p class="tour-card-sub">Хөвсгөл нуур, тайга, завины аялал — цэнгэг агаарт амарна.</p>
+          <p class="tour-card-price">₮1,150,000-с</p>
+        </div>
+      </article>
+
+      <article class="tour-card reveal" tabindex="0" role="button" aria-label="Аялал 4: Алтайн бүргэдчид">
+        <div class="tour-card-img" style="background-image: url('https://source.unsplash.com/600x800/?mongolia,altai&sig=4')" role="img" aria-label="Алтайн бүргэдчин"></div>
+        <div class="tour-card-overlay" aria-hidden="true"></div>
+        <div class="tour-card-content">
+          <p class="tour-card-num">Аялал № 4</p>
+          <h3 class="tour-card-name">Алтайн бүргэдчид</h3>
+          <p class="tour-card-sub">Алтайн уулс, бүргэдийн ан, казах соёл — өвөрмөц туршлага.</p>
+          <p class="tour-card-price">₮1,480,000-с</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════
+       STATS BAR
+  ═══════════════════════════ -->
+  <div class="stats-bar" role="region" aria-label="Үндсэн тоон үзүүлэлтүүд">
+    <div class="stats-inner">
+      <div class="stat-divider">
+        <span class="stat-num counter" data-target="8600" data-suffix="+">0</span>
+        <span class="stat-label">Сэтгэл ханамжтай аялагчид</span>
+      </div>
+      <div class="stat-divider">
+        <span class="stat-num counter" data-target="26" data-suffix="">0</span>
+        <span class="stat-label">Сонгомол хөтөлбөрүүд</span>
+      </div>
+      <div class="stat-divider">
+        <span class="stat-num counter" data-target="11" data-suffix=" жил">0</span>
+        <span class="stat-label">Туршлагатай жилүүд</span>
+      </div>
+      <div>
+        <span class="stat-num">4.8</span>
+        <span class="stat-label">Дундаж үнэлгээ</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════
+       VIDEO SECTION
+  ═══════════════════════════ -->
+  <section class="video-section" aria-label="Аяллын видео">
+    <div class="video-bg" role="img" aria-label="Монголын уулсын тэнгэр"></div>
+
+    <div class="video-content">
+      <h2 class="video-title reveal">ТАЛ НУТАГ,<br>УУЛ УС,<br>СЭТГЭЛ</h2>
+      <button class="video-play-btn reveal" aria-label="Видео үзэх">
+        <span class="play-circle">
+          <svg width="20" height="20"><use href="#icon-play"/></svg>
+        </span>
+        Видео үзэх
+      </button>
+      <p class="video-desc reveal">
+        Бид Хөвсгөлөөс Говь хүртэлх хамгийн үзэсгэлэнт нутгуудаар аялж, таны мөрөөдлийн аяллыг бүтээнэ.
+      </p>
+    </div>
+
+    <div class="video-thumbs" aria-label="Видеоны жижиг зургууд">
+      <button class="video-thumb" aria-label="Говийн манхан видео тоглуулах">
+        <img src="https://source.unsplash.com/320x200/?mongolia,desert&sig=5" alt="Говийн манхан" loading="lazy" />
+        <span class="video-thumb-play">
+          <svg width="24" height="24"><use href="#icon-play"/></svg>
+        </span>
+      </button>
+      <button class="video-thumb" aria-label="Тал нутгийн зам видео тоглуулах">
+        <img src="https://source.unsplash.com/320x200/?mongolia,steppe&sig=6" alt="Тал нутгийн зам" loading="lazy" />
+        <span class="video-thumb-play">
+          <svg width="24" height="24"><use href="#icon-play"/></svg>
+        </span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════
+       GALLERY
+  ═══════════════════════════ -->
+  <section id="gallery" class="gallery-section" aria-label="Зургийн галерей">
+    <div class="container">
+      <header class="section-header reveal">
+        <p class="section-eyebrow">Зургийн түүхүүд</p>
+        <h2 class="section-title">ГАЛЕРЕЙ</h2>
+      </header>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gal-item gal-1">
+        <img src="https://source.unsplash.com/800x800/?ulaanbaatar,night&sig=7" alt="Улаанбаатарын шөнө" loading="lazy" />
+      </div>
+      <div class="gal-item gal-2">
+        <img src="https://source.unsplash.com/600x600/?mongolia,yurt&sig=8" alt="Монгол гэр" loading="lazy" />
+      </div>
+      <div class="gal-item gal-3">
+        <img src="https://source.unsplash.com/600x600/?mongolia,horse&sig=9" alt="Морьтон" loading="lazy" />
+      </div>
+      <div class="gal-item gal-4">
+        <img src="https://source.unsplash.com/600x600/?mongolia,monastery&sig=10" alt="Буддын хийд" loading="lazy" />
+      </div>
+      <div class="gal-item gal-5">
+        <img src="https://source.unsplash.com/600x600/?mongolia,desert&sig=11" alt="Говийн манхан" loading="lazy" />
+      </div>
+      <div class="gal-item gal-6">
+        <img src="https://source.unsplash.com/400x400/?mongolia,altai&sig=12" alt="Алтайн уулс" loading="lazy" />
+      </div>
+      <div class="gal-item gal-7">
+        <img src="https://source.unsplash.com/400x400/?mongolia,festival&sig=13" alt="Наадмын баяр" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════
+       TESTIMONIALS
+  ═══════════════════════════ -->
+  <section id="reviews" class="testimonials" aria-label="Аялагчдын сэтгэгдэл">
+    <div class="testimonials-inner">
+      <header class="reveal">
+        <p class="section-eyebrow">Аялагчид юу хэлэв</p>
+        <h2 class="section-title" style="font-size:clamp(2rem,4vw,3rem)">СЭТГЭГДЭЛ</h2>
+      </header>
+
+      <div class="testimonial-stars reveal" aria-label="5 од">
+        <svg width="16" height="16"><use href="#icon-star"/></svg>
+        <svg width="16" height="16"><use href="#icon-star"/></svg>
+        <svg width="16" height="16"><use href="#icon-star"/></svg>
+        <svg width="16" height="16"><use href="#icon-star"/></svg>
+        <svg width="16" height="16"><use href="#icon-star"/></svg>
+      </div>
+
+      <blockquote class="testimonial-quote reveal" style="transition: opacity 0.3s;">
+        Тал нутгийн нар мандахыг харах мөч насан туршийн дурсамж боллоо. Багийн зохион байгуулалт үнэхээр сайн.
+      </blockquote>
+
+      <cite class="testimonial-author reveal">— Номин Б. — Сөүл</cite>
+
+      <div class="testimonial-dots reveal" role="tablist" aria-label="Сэтгэгдлийн шилжүүлэгч">
+        <button class="t-dot active" role="tab" aria-selected="true" aria-label="Сэтгэгдэл 1"></button>
+        <button class="t-dot" role="tab" aria-selected="false" aria-label="Сэтгэгдэл 2"></button>
+        <button class="t-dot" role="tab" aria-selected="false" aria-label="Сэтгэгдэл 3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════
+       BOOK / CONTACT
+  ═══════════════════════════ -->
+  <section id="contact" class="book-section" aria-label="Аялал захиалах">
+    <div class="book-inner">
+      <div>
+        <p class="section-eyebrow reveal">Аяллаа эхлүүл</p>
+        <h2 class="book-title reveal">МОНГОЛ<br>АЯЛЛАА<br>ЗАХИАЛ</h2>
+        <p class="book-text reveal">
+          Хүссэн чиглэл, хугацаагаа хэлээрэй. Бид таны мөрөөдлийн аяллыг нарийн төлөвлөж, аюулгүй, тав тухтай туршлагыг бүрдүүлнэ.
+        </p>
+      </div>
+
+      <form class="book-form reveal" novalidate>
+        <div class="form-row">
+          <input class="form-input" type="text" placeholder="Нэр" autocomplete="given-name" required aria-label="Нэр" />
+          <input class="form-input" type="text" placeholder="Овог" autocomplete="family-name" required aria-label="Овог" />
+        </div>
+        <input class="form-input" type="email" placeholder="И-мэйл хаяг" autocomplete="email" required aria-label="И-мэйл" />
+        <div class="form-row">
+          <input class="form-input" type="date" aria-label="Явах огноо" />
+          <input class="form-input" type="number" placeholder="Аялагчдын тоо" min="1" max="20" aria-label="Аялагчдын тоо" />
+        </div>
+        <select class="form-select" aria-label="Аялал сонгох">
+          <option value="" disabled selected>Аялал сонгох</option>
+          <option>Аялал 1 — Хархорум &amp; Эрдэнэ Зуу</option>
+          <option>Аялал 2 — Говийн манхан</option>
+          <option>Аялал 3 — Хөвсгөл нуур</option>
+          <option>Аялал 4 — Алтайн бүргэдчид</option>
+          <option>Захиалгат аялал</option>
+        </select>
+        <button type="submit" class="btn-primary" style="align-self:flex-start">
+          Захиалах
+          <svg width="16" height="16"><use href="#icon-arrow-right"/></svg>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════
+       FOOTER
+  ═══════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">MONGOLIA</div>
+        <p class="footer-desc">
+          Монгол орны аяллын сонгомол туршлагуудыг 2016 оноос хүргэж байна. Аялал бүр таныг өөрчилнө гэж бид итгэдэг.
+        </p>
+      </div>
+
+      <nav aria-label="Товч холбоос">
+        <h3 class="footer-heading">Товч холбоос</h3>
+        <ul class="footer-links" role="list">
+          <li><a href="#">Нүүр</a></li>
+          <li><a href="#about">Бидний тухай</a></li>
+          <li><a href="#tours">Аяллууд</a></li>
+          <li><a href="#gallery">Галерей</a></li>
+          <li><a href="#contact">Холбоо барих</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Аяллын холбоос">
+        <h3 class="footer-heading">Аяллууд</h3>
+        <ul class="footer-links" role="list">
+          <li><a href="#">Хархорум &amp; Эрдэнэ Зуу</a></li>
+          <li><a href="#">Говийн манхан</a></li>
+          <li><a href="#">Хөвсгөл нуур</a></li>
+          <li><a href="#">Алтайн бүргэдчид</a></li>
+          <li><a href="#">Захиалгат аялал</a></li>
+        </ul>
+      </nav>
+
+      <address>
+        <h3 class="footer-heading">Холбоо барих</h3>
+        <ul class="footer-links" role="list" style="font-style:normal">
+          <li><a href="mailto:hello@nomad.mn">hello@nomad.mn</a></li>
+          <li><a href="tel:+97611123456">+976 11 123456</a></li>
+          <li><a href="#">Улаанбаатар, Монгол</a></li>
+          <li><a href="#">Дав–Баа 09:00–19:00</a></li>
+        </ul>
+      </address>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Mongolia Travel. Бүх эрх хуулиар хамгаалагдсан.</p>
+      <div class="footer-socials" aria-label="Сошиал холбоосууд">
+        <a href="#" class="social-btn" aria-label="Инстаграм">IG</a>
+        <a href="#" class="social-btn" aria-label="Твиттер/Х">X</a>
+        <a href="#" class="social-btn" aria-label="Юүтүб">YT</a>
+        <a href="#" class="social-btn" aria-label="Фэйсбүүк">FB</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
